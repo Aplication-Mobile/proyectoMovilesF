@@ -61,6 +61,7 @@ class AddResearchActivity : AppCompatActivity() {
                     .addOnSuccessListener { documentReference ->
                         // Éxito al agregar la investigación
                         // Puedes realizar acciones adicionales aquí si es necesario
+                        showToast("Agregado Correctamente")
                         finish()  // Cerrar la actividad después de agregar exitosamente
                     }
                     .addOnFailureListener { e ->
@@ -75,7 +76,8 @@ class AddResearchActivity : AppCompatActivity() {
     }
 
     private fun showToast(message: String) {
-        Toast.makeText(this,"Proyecto Agregado Corectamente", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, message.toString(), Toast.LENGTH_LONG).show()
     }
 
-    }
+
+}
